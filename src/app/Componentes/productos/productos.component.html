@@ -1,9 +1,14 @@
-<div *ngFor="let producto of productos">
-    <div class="producto">
-      <h2>{{ producto.nombre_prod }}</h2>
-      <p class="descripcion">{{ producto.descripcion_prod }}</p>
-      <p class="precio" [ngStyle]="{'color': 'red'}">Precio: {{ producto.precio_prod }}</p>
+<div class="container">
+    <div class="col">
+      <div class="col-md-4" *ngFor="let producto of productos">
+        <div class="card border-dark mb-3" style="border-radius: 10px; margin-right: 5px;">
+          <div class="card-body">
+            <h5 class="card-title">{{ producto.nombre_prod }}</h5>
+            <p class="card-text">{{ producto.descripcion_prod }}</p>
+            <p class="card-text text-danger">Precio: {{ producto.precio_prod }}</p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-
-
+ </div>
+  
